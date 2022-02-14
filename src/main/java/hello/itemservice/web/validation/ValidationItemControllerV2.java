@@ -54,7 +54,7 @@ public class ValidationItemControllerV2 {
             bindingResult.addError(new FieldError("item", "itemName", "상품 이름은 필수 입니다."));
         }
         if (item.getPrice() == null || item.getPrice() <1000 || item.getPrice() > 1000000) {
-            bindingResult.addError(new FieldError("item", "itemName", "가격은 1,000 ~ 1,000,000 까지 허용합니다."));
+            bindingResult.addError(new FieldError("item", "price", "가격은 1,000 ~ 1,000,000 까지 허용합니다."));
         }
         if (item.getQuantity() == null || item.getQuantity() >= 9999) {
             bindingResult.addError(new FieldError("item", "quantity", "수량은 최대 9,999 까지 허용합니다"));
